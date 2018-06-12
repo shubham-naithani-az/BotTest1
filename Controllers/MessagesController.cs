@@ -25,7 +25,6 @@ namespace Microsoft.Bot.Sample.FormBot
         //</summary>
         //<param name="activity"></param>
         [ResponseType(typeof(void))]
-        [HttpGet]
         public virtual async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
             if (activity != null)
