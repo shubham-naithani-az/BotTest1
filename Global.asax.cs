@@ -6,6 +6,7 @@ using Microsoft.Bot.Builder.Azure;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Connector;
+using System.Web.Http.Dispatcher;
 
 namespace SimpleEchoBot
 {
@@ -36,6 +37,10 @@ namespace SimpleEchoBot
 
                 });
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configure(config =>
+            {
+                config.Services.Replace(typeof(IHttpControllerTypeResolver), new DefaultHttpControllerTypeResolver());
+});
         }
     }
 }
