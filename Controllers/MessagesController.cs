@@ -20,11 +20,12 @@ namespace Microsoft.Bot.Sample.FormBot
         }
 
         /// <summary>
-        /// POST: api/Messages
-        /// receive a message from a user and send replies
-        /// </summary>
-        /// <param name="activity"></param>
+        //POST: api/Messages
+       //receive a message from a user and send replies
+        //</summary>
+        //<param name="activity"></param>
         [ResponseType(typeof(void))]
+        [HttpGet]
         public virtual async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
             if (activity != null)

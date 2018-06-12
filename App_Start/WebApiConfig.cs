@@ -29,7 +29,7 @@ namespace SimpleEchoBot
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/messages",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
