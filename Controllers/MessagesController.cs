@@ -25,7 +25,7 @@ namespace Microsoft.Bot.Sample.FormBot
         //</summary>
         //<param name="activity"></param>
         [HttpGet , HttpPost]
-        [Route("api/{controllers}")]
+        //[Route("api/{controllers}")]
         [ResponseType(typeof(void))]
         public virtual async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
