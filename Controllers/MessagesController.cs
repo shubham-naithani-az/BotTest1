@@ -16,6 +16,7 @@ namespace Microsoft.Bot.Sample.FormBot
         internal static IDialog<SandwichOrder> MakeRootDialog()
         {
             return Chain.From(() => FormDialog.FromForm(SandwichOrder.BuildForm));
+            
         }
 
         /// <summary>
