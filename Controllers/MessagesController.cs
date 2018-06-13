@@ -10,6 +10,7 @@ using System.Diagnostics;
 
 namespace Microsoft.Bot.Sample.FormBot
 {
+[HttpGet , HttpPost]
     [BotAuthentication]
     public class MessagesController : ApiController
     {
